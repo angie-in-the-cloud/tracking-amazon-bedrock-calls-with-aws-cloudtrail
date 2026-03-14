@@ -2,7 +2,7 @@
 
 A demonstration of how AWS CloudTrail logs Amazon Bedrock API activitym and why that matters for GRC (governance, risk, and compliance).
 
-> 📺 This repo accompanies a YouTube video. [Watch it here](#)
+> 📺 This repo accompanies my [YouTube video](https://youtu.be/LHOXhByqs7g)
 
 ---
 
@@ -69,6 +69,6 @@ All IAM access keys used in the demo were deleted after recording.
 
 ## Resources
 
-📺 Watch the full walkthrough on YouTube: [link]
+📺 Watch the full walkthrough on YouTube: [YouTube](https://youtu.be/LHOXhByqs7g)
 
 ---
