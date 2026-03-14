@@ -1,6 +1,6 @@
 # Auditing AI: Tracking Amazon Bedrock Calls with AWS CloudTrail
 
-A demonstration of how AWS CloudTrail logs Amazon Bedrock API activitym and why that matters for GRC (governance, risk, and compliance).
+A demonstration of how AWS CloudTrail logs Amazon Bedrock API activity and why that matters for GRC (governance, risk, and compliance).
 
 > 📺 This repo accompanies my [YouTube video](https://youtu.be/LHOXhByqs7g)
 
@@ -19,7 +19,7 @@ This project shows how CloudTrail captures Bedrock API calls to create an audit 
 - A Python script that calls the **Amazon Bedrock Converse API**
 - How that API call appears in **AWS CloudTrail Event History**
 - What CloudTrail records per event:
-  - User identity (IAM user)
+  - User identity details
   - Timestamp
   - Event name (e.g., `Converse`)
   - AWS region
@@ -29,7 +29,7 @@ This project shows how CloudTrail captures Bedrock API calls to create an audit 
 
 ## Key Governance Takeaway
 
-CloudTrail gives visibility into *who used a model, when, and where* - without storing sensitive prompt content. That's auditability without privacy risk.
+CloudTrail gives visibility into *who used a model, when, and where*, without storing sensitive prompt content. That's auditability without privacy risk.
 
 ---
 
@@ -37,7 +37,6 @@ CloudTrail gives visibility into *who used a model, when, and where* - without s
 
 - An AWS account with Amazon Bedrock access
 - IAM users configured with Bedrock permissions
-- AWS CloudTrail enabled (on by default in most accounts)
 - Python 3.x
 - `boto3` installed
 ```bash
@@ -48,7 +47,7 @@ pip install boto3
 
 ## Usage
 
-Run the chatbot script to generate a Bedrock API call:
+Run the chatbot script in your terminal to generate a Bedrock API call:
 ```bash
 python chatbot.py
 ```
@@ -57,13 +56,7 @@ Then navigate to **AWS CloudTrail → Event History** and filter by:
 - **Lookup attribute:** Event source
 - **Value:** `bedrock.amazonaws.com`
 
-The `Converse` event will appear with the IAM user, timestamp, and region.
-
----
-
-## Security Note
-
-All IAM access keys used in the demo were deleted after recording.
+Click on the `Converse` event to see all event details, such as: user identity details, timestamp, and region.
 
 ---
 
